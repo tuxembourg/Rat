@@ -75,7 +75,7 @@ function renderHome() {
       title: 'Other Projects',
       desc: 'Other Projects.',
       modalTitle: 'Other Projecst',
-      modalBody: `<p>Velvet Casino, Fake casino fully built in html just for fun: https://tuxembourg.github.io/velvet.</p>`
+      modalBody: `<p>Velvet Casino, Fake casino fully built in html just for fun, visit my github page for that if intrested.</p>`
     },
     {
       // PLACEHOLDER: Project card 4 — title, description, modal body
