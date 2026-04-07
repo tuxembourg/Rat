@@ -72,10 +72,10 @@ function renderHome() {
     {
       // PLACEHOLDER: Project card 3 — title, description, modal body
       num: '03',
-      title: 'Other Projects',
-      desc: 'Other Projects.',
-      modalTitle: 'Other Projecst',
-      modalBody: `<p>Velvet Casino, Fake casino fully built in html just for fun, visit my github page for that if intrested.</p>`
+      title: 'PLACEHOLDER PROJECT 3',
+      desc: 'PLACEHOLDER — Short description of project three goes here.',
+      modalTitle: 'Project Three',
+      modalBody: `<p>PLACEHOLDER — Detailed description of Project 3.</p>`
     },
     {
       // PLACEHOLDER: Project card 4 — title, description, modal body
