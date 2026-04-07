@@ -44,34 +44,38 @@ function renderHome() {
       title: 'Socials',
       desc: 'This card has my socials Follow me because why not?.',
       modalTitle: 'Socials',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 1. Explain what this is, what it does, and why it matters.</p>
+      modalBody: `<p>This has all my public socials</p>
                   <ul>
                     <li>https://youtube.com/@fluxxblad3</li>
                     <li>discord userid: 1484089269621489776</li>
                     <li>discord username: tux.tux</li>
                     <li>https://www.tiktok.com/@linux.tux.tux</li>
                     <li>https://steamcommunity.com/id/darealnpc</li>
+                    <li>https://github.com/tuxembourg/</li>
                   </ul>`
     },
     {
       // PLACEHOLDER: Project card 2 — title, description, modal body
       num: '02',
-      title: 'PLACEHOLDER PROJECT 2',
-      desc: 'PLACEHOLDER — Short description of project two goes here.',
-      modalTitle: 'Project Two',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 2.</p>
+      title: 'Description',
+      desc: 'What most of the tools does
+      modalTitle: 'Descriptions',
+      modalBody: `<p>What it does.</p>
                   <ul>
-                    <li>PLACEHOLDER feature / detail A</li>
-                    <li>PLACEHOLDER feature / detail B</li>
+                    <li>Rat 1: Classic rat skidded from multiple sources but mostly original</li>
+                    <li>Rat 2: Custom rat skidded from 1 source</li>
+                    <li>Cypher: Custom built shell-like environment with multiple options like ip-geolocation capabilities</li>
+                    <li>Kernel X: Custom built shell coming soon</li>
+                    <li>MORE TOOLS COMING SOON!</li>
                   </ul>`
     },
     {
       // PLACEHOLDER: Project card 3 — title, description, modal body
       num: '03',
-      title: 'PLACEHOLDER PROJECT 3',
-      desc: 'PLACEHOLDER — Short description of project three goes here.',
-      modalTitle: 'Project Three',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 3.</p>`
+      title: 'Other Projects',
+      desc: 'Other Projects.',
+      modalTitle: 'Other Projecst',
+      modalBody: `<p>Velvet Casino, Fake casino fully built in html just for fun \n https://tuxembourg.github.io/velvet.</p>`
     },
     {
       // PLACEHOLDER: Project card 4 — title, description, modal body
