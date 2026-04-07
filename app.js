@@ -41,14 +41,16 @@ function renderHome() {
     {
       // PLACEHOLDER: Project card 1 — title, description, modal body
       num: '01',
-      title: 'PLACEHOLDER PROJECT 1',
-      desc: 'PLACEHOLDER — Short description of project one goes here.',
-      modalTitle: 'Project One',
+      title: 'Socials',
+      desc: 'This card has my socials Follow me because why not?.',
+      modalTitle: 'Socials',
       modalBody: `<p>PLACEHOLDER — Detailed description of Project 1. Explain what this is, what it does, and why it matters.</p>
                   <ul>
-                    <li>PLACEHOLDER feature / detail A</li>
-                    <li>PLACEHOLDER feature / detail B</li>
-                    <li>PLACEHOLDER feature / detail C</li>
+                    <li>https://youtube.com/@fluxxblad3</li>
+                    <li>discord userid: 1484089269621489776</li>
+                    <li>discord username: tux.tux</li>
+                    <li>https://www.tiktok.com/@linux.tux.tux</li>
+                    <li>https://steamcommunity.com/id/darealnpc</li>
                   </ul>`
     },
     {
