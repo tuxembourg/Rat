@@ -25,6 +25,7 @@ function loadPage(pageId) {
     case 'home':  main.innerHTML = renderHome();  break;
     case 'tool1': main.innerHTML = renderTool1(); break;
     case 'tool2': main.innerHTML = renderTool2(); break;
+    case 'tool3': main.innerHTML = renderTool3(); break;
     default:      main.innerHTML = renderHome();
   }
 }
