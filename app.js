@@ -73,65 +73,9 @@ function renderHome() {
       title: 'Tools coming soon',
       desc: 'List of most of the tools coming in the near/far future.',
       modalTitle: 'More tools',
-      modalBody: `<p>Kernel X - Shell environment built in python, Discord Selfbot - Should be self expanatory, Velvet casino - Fake casino built in html just for fun!. Those are the ones im working on right now but more are on the way</p>`
+      modalBody: `<p>Kernel X - Shell environment built in python, Discord Selfbot - Should be self expanatory, Velvet casino - Fake casino built in html just for fun (visit my github for that)!. Those are the ones im working on right now but more are on the way</p>`
     },
     {
-      // PLACEHOLDER: Project card 4 — title, description, modal body
-      num: '04',
-      title: 'PLACEHOLDER PROJECT 4',
-      desc: 'PLACEHOLDER — Short description of project four goes here.',
-      modalTitle: 'Project Four',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 4.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 5 — title, description, modal body
-      num: '05',
-      title: 'PLACEHOLDER PROJECT 5',
-      desc: 'PLACEHOLDER — Short description of project five goes here.',
-      modalTitle: 'Project Five',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 5.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 6 — title, description, modal body
-      num: '06',
-      title: 'PLACEHOLDER PROJECT 6',
-      desc: 'PLACEHOLDER — Short description of project six goes here.',
-      modalTitle: 'Project Six',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 6.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 7 — title, description, modal body
-      num: '07',
-      title: 'PLACEHOLDER PROJECT 7',
-      desc: 'PLACEHOLDER — Short description of project seven goes here.',
-      modalTitle: 'Project Seven',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 7.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 8 — title, description, modal body
-      num: '08',
-      title: 'PLACEHOLDER PROJECT 8',
-      desc: 'PLACEHOLDER — Short description of project eight goes here.',
-      modalTitle: 'Project Eight',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 8.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 9 — title, description, modal body
-      num: '09',
-      title: 'PLACEHOLDER PROJECT 9',
-      desc: 'PLACEHOLDER — Short description of project nine goes here.',
-      modalTitle: 'Project Nine',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 9.</p>`
-    },
-    {
-      // PLACEHOLDER: Project card 10 — title, description, modal body
-      num: '10',
-      title: 'PLACEHOLDER PROJECT 10',
-      desc: 'PLACEHOLDER — Short description of project ten goes here.',
-      modalTitle: 'Project Ten',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 10.</p>`
-    },
-  ];
 
   const cards = projects.map((p, i) => `
     <div class="project-card" onclick="openProjectModal(${i})">
@@ -227,7 +171,7 @@ async function runBuild() {
   // Simulate build steps — replace this block with your actual backend call
   // PLACEHOLDER: Replace the simulated steps below with a real fetch() to your build backend/API
   const steps = [
-    { msg: `> Injecting token into script template...`,          delay: 600  },
+    { msg: `> Injecting token into script ...`,          delay: 600  },
     { msg: `> Token accepted: <span style="color:var(--accent)">${escHtml(build_1field.slice(0,6))}••••</span>`, delay: 900  },
     { msg: `> Running PyInstaller — please wait...`,             delay: 1500 },
     { msg: `> Bundling dependencies...`,                         delay: 2400 },
@@ -363,4 +307,5 @@ function escHtml(s) {
 // -----------------------------------------------------------------------
 // INIT — load home page on start
 // -----------------------------------------------------------------------
+openWarning();
 loadPage('home');
