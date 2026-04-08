@@ -34,42 +34,46 @@ function loadPage(pageId) {
 // -----------------------------------------------------------------------
 function renderHome() {
   // PLACEHOLDER: Channel name used in homepage heading — change "CHANNEL" below
-  const channelName = 'CHANNEL'; // PLACEHOLDER: Homepage heading channel name
+  const channelName = 'Fluxxblad3'; // PLACEHOLDER: Homepage heading channel name
 
   // Each project card: title + description + modal content
   const projects = [
     {
       // PLACEHOLDER: Project card 1 — title, description, modal body
       num: '01',
-      title: 'PLACEHOLDER PROJECT 1',
-      desc: 'PLACEHOLDER — Short description of project one goes here.',
-      modalTitle: 'Project One',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 1. Explain what this is, what it does, and why it matters.</p>
+      title: 'SOCIALS',
+      desc: 'Most of my socials here.',
+      modalTitle: 'Socials',
+      modalBody: `<p>Socials because why not?.</p>
                   <ul>
-                    <li>PLACEHOLDER feature / detail A</li>
-                    <li>PLACEHOLDER feature / detail B</li>
-                    <li>PLACEHOLDER feature / detail C</li>
+                    <li>https://steamcommunity.com/id/darealnpc</li>
+                    <li>Discord userid: 1484089269621489776</li>
+                    <li>Discord username: @tux.tux</li>
+                    <li>https://youtube.com/@Fluxxblad3</li>
+                    <li>https://www.tiktok.com/@linux.tux.tux</li>
+                    <li>https://github.com/tuxembourg</li>
                   </ul>`
     },
     {
       // PLACEHOLDER: Project card 2 — title, description, modal body
       num: '02',
-      title: 'PLACEHOLDER PROJECT 2',
-      desc: 'PLACEHOLDER — Short description of project two goes here.',
-      modalTitle: 'Project Two',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 2.</p>
+      title: 'Utilities & Functions',
+      desc: 'All the tools here and what they do.',
+      modalTitle: 'Utils & Functions',
+      modalBody: `<p>Heres all the tools and what they do.</p>
                   <ul>
-                    <li>PLACEHOLDER feature / detail A</li>
-                    <li>PLACEHOLDER feature / detail B</li>
+                    <li>RAT-1 - Remote administration tool made to learn about harmful code and what they do! </li>
+                    <li>RAT-2 - Same thing as RAT-1 but better</li>
+                    <li>Cypher - Shell-like environment with capabilities such as ip-geolocation</li>
                   </ul>`
     },
     {
       // PLACEHOLDER: Project card 3 — title, description, modal body
       num: '03',
-      title: 'PLACEHOLDER PROJECT 3',
-      desc: 'PLACEHOLDER — Short description of project three goes here.',
-      modalTitle: 'Project Three',
-      modalBody: `<p>PLACEHOLDER — Detailed description of Project 3.</p>`
+      title: 'Tools coming soon',
+      desc: 'List of most of the tools coming in the near/far future.',
+      modalTitle: 'More tools',
+      modalBody: `<p>Kernel X - Shell environment built in python, Discord Selfbot - Should be self expanatory, Velvet casino - Fake casino built in html just for fun!. Those are the ones im working on right now but more are on the way</p>`
     },
     {
       // PLACEHOLDER: Project card 4 — title, description, modal body
@@ -147,7 +151,7 @@ function renderHome() {
       PROJECTS
     </div>
     <!-- PLACEHOLDER: Home subtitle line below heading -->
-    <div class="home-subtitle">// PLACEHOLDER — Tagline or subtitle for your projects page</div>
+    <div class="home-subtitle">// Most of the tools are built for windows.</div>
     <div class="projects-grid">${cards}</div>
   `;
 }
@@ -160,7 +164,7 @@ function renderTool1() {
     <div class="page-header">
       <span class="page-tag">// TOOL 01</span>
       <!-- PLACEHOLDER: Tool 1 page title -->
-      <div class="page-title">PLACEHOLDER — BUILDER</div>
+      <div class="page-title">RAT-1 BUILDER</div>
       <!-- PLACEHOLDER: Tool 1 page description -->
       <div class="page-desc">PLACEHOLDER — Enter your token below. The script will inject it and compile a standalone executable.</div>
     </div>
