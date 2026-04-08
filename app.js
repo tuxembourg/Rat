@@ -76,7 +76,7 @@ function renderHome() {
       modalBody: `<p>Kernel X - Shell environment built in python, Discord Selfbot - Should be self expanatory, Velvet casino - Fake casino built in html just for fun (visit my github for that)!. Those are the ones im working on right now but more are on the way</p>`
     },
     {
-
+];
   const cards = projects.map((p, i) => `
     <div class="project-card" onclick="openProjectModal(${i})">
       <div class="card-num">${p.num}</div>
